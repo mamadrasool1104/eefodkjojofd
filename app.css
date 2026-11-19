@@ -1209,3 +1209,18 @@ body[data-screen="suggest"] .tabbar { transform: translate3d(0, 140%, 0); opacit
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+
+/* ---------- انتخابگر تم (تنظیمات) ---------- */
+.theme-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding: 6px 2px 4px; }
+.theme-opt { position: relative; display: flex; flex-direction: column; align-items: center; gap: 7px; padding: 8px 6px 10px; border-radius: var(--r-m); background: var(--glass); border: 2px solid var(--edge); font-weight: var(--fw-strong); font-size: .85rem; }
+.theme-opt:active { transform: scale(.97); }
+.theme-opt__sw { position: relative; width: 100%; aspect-ratio: 3 / 4; border-radius: 14px; overflow: hidden; border: 1.5px solid var(--edge-2); box-shadow: 0 3px 0 rgba(0,0,0,.25); }
+.theme-opt__sw i { position: absolute; display: block; border-radius: 8px; }
+.theme-opt__sw .t-logo { top: 14%; left: 28%; right: 28%; height: 14%; border-radius: 6px; background: var(--gold); }
+.theme-opt__sw .t-play { top: 38%; left: 10%; right: 10%; height: 15%; background: linear-gradient(180deg, var(--green-hi), var(--green-deep)); }
+.theme-opt__sw .t-tile { top: 58%; left: 10%; width: 38%; height: 14%; }
+.theme-opt__sw .t-tile2 { top: 58%; right: 10%; width: 38%; height: 14%; }
+.theme-opt__sw .t-bar { bottom: 5%; left: 8%; right: 8%; height: 10%; border-radius: 10px; }
+.theme-opt.is-on { border-color: var(--gold); background: var(--glass-2); }
+.theme-opt.is-on::after { content: "✓"; position: absolute; top: 4px; right: 4px; width: 22px; height: 22px; display: grid; place-items: center; border-radius: 50%; background: var(--gold); color: var(--gold-ink); font-size: .8rem; font-weight: 900; box-shadow: 0 2px 0 var(--gold-dark); }
